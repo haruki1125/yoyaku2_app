@@ -1,0 +1,13 @@
+<%= link_to '予約する', new_guest_path %> 
+<%= month_calendar events: @guest do |date, events| %>
+  <%= date.day %>
+  <div>
+    <% events.each do |event| %>
+      <div>
+      <%= event.message %>
+      <div>
+    <% end %>
+  </div>
+<% end %>
+
+<%= link_to 'event', events_path %> 
