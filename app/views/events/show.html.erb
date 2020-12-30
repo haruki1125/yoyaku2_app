@@ -1,0 +1,19 @@
+<div>
+<%= @event.name %>
+</div>
+<div>
+<%= @event.content %>
+</div>
+<div>
+<%= @event.start_time %>
+</div>
+<div>
+<%= @event.phone_number %>
+</div>
+<div>
+<%= @event.member %>
+</div>
+
+<%= link_to '編集', edit_event_path(@event.id), method: :get, class: "item-red-btn" %>
+<p class='or-text'>or</p>
+<%= link_to '削除', event_path(@event.id), method: :delete, class:'item-destroy' %>

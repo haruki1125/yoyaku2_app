@@ -1,0 +1,9 @@
+<div>
+<%= @message.message %>
+</div>
+<div>
+<%= @message.start_time %>
+</div>
+<%= link_to '編集', edit_message_path(@message.id), method: :get, class: "item-red-btn" %>
+<p class='or-text'>or</p>
+<%= link_to '削除', message_path(@message.id), method: :delete, class:'item-destroy' %>
