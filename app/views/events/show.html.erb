@@ -1,19 +1,38 @@
-<div>
-<%= @event.name %>
+<div class="line">
+<div class = "box">
+  <div class = "message-box">
+      <p class='or-text'>お名前</p>
+      <div class = "messages">
+      <%= @event.name %>
+      </div>
+  </div>
+  <div class = "message-box">
+    <p class='or-text'>テキスト</p>
+    <div class = "messages">
+      <%= @event.content %>
+    </div>
+  </div>
+  <div class = "message-box">
+    <p class='or-text'>時間</p>
+    <div class = "messages">
+      <%= @event.start_time %>
+    </div>
+  </div>
+  <div class = "message-box">
+    <p class='or-text'>電話番号</p>
+    <div class = "messages">
+      <%= @event.phone_number %>
+    </div>
+  </div>
+  <div class = "message-box">
+    <p class='or-text'>人数</p>
+    <div class = "messages">
+      <%= @event.member %>
+    </div>
+  </div>
 </div>
-<div>
-<%= @event.content %>
 </div>
-<div>
-<%= @event.start_time %>
+<div class = "edit-box">
+  <%= link_to '編集', edit_event_path(@event.id), method: :get, class: "btn" %>
+  <%= link_to '削除', event_path(@event.id), method: :delete, class:'btn' %>
 </div>
-<div>
-<%= @event.phone_number %>
-</div>
-<div>
-<%= @event.member %>
-</div>
-
-<%= link_to '編集', edit_event_path(@event.id), method: :get, class: "item-red-btn" %>
-<p class='or-text'>or</p>
-<%= link_to '削除', event_path(@event.id), method: :delete, class:'item-destroy' %>

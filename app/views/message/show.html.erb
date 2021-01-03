@@ -1,9 +1,21 @@
-<div>
-<%= @message.message %>
-</div>
-<div>
-<%= @message.start_time %>
-</div>
-<%= link_to '編集', edit_message_path(@message.id), method: :get, class: "item-red-btn" %>
-<p class='or-text'>or</p>
-<%= link_to '削除', message_path(@message.id), method: :delete, class:'item-destroy' %>
+  <div class="line">
+  <div class = "box">
+    <div class = "message-box">
+      <p class='or-text'>message</p>
+      <div class = "messages">
+        <%= @message.message %>
+      </div>
+    </div>
+    <div class = "message-box">
+      <p class='or-text'>時間</p>
+      <div class = "messages">
+      <%= @message.start_time %>
+      </div>
+    </div>
+  </div>
+  </div>
+  <div class = "edit-box">
+    <%= link_to '編集', edit_message_path(@message.id), method: :get, class: "btn" %>
+    <%= link_to '削除', message_path(@message.id), method: :delete, class:'btn' %>
+  </div>
+  

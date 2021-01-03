@@ -1,3 +1,98 @@
-.btn {
-  
+
+
+.btn-box {
+  margin: 15px 0 15px 0;
+  width: 100%;
 }
+
+
+body{
+  padding: 30px;
+}
+
+.sign {
+  border-bottom: 1px #EAA239 solid;
+  padding-bottom: 10px;
+}
+
+.log {
+  text-decoration: none;
+  border: 1px #EAA239 solid;
+  padding: 5px;
+  color: #EAA239;
+  font-size: 20px;
+}
+
+.name {
+  text-decoration: none;
+}
+
+.border {
+  padding:20px;
+  border: 1px #EAA239 solid;
+  margin-bottom: 15px;
+}
+
+.btn2 {
+  font-size: 20px;
+  background-color: #EAA239;
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  padding: 5px;
+  border-radius: 7px;
+}
+
+.text {
+  margin: 15px 0;
+  font-size: 18px;
+  background-color: #DDDDDD;
+  padding: 2px;
+  width: 100px;
+  text-align: center;
+
+}
+
+.message {
+  text-decoration: none;
+  background-color: rgb(244, 55, 134);
+  color: rgb(247, 247, 247);
+  display: inline-block;
+  font-size: 10px;
+}
+
+.message2 {
+  text-decoration: none;
+  background-color: rgb(224, 54, 134);
+  color: rgb(247, 247, 247);
+  display: inline-block;
+  font-size: 10px;
+
+}
+
+.box {
+  margin: 10px auto;
+  padding: 10px;
+  width: 90%;
+}
+
+.title {
+  display: flex;
+  justify-content: space-between;
+  font-size: large;
+  margin: 5px 0;
+}
+.submit {
+  margin: 30px auto 0 auto;
+  width: 100%;
+  text-align: center;
+}
+
+label {
+  background-color: #EAA239;
+  color: #ffff;
+  padding: 2px;
+  border-radius: 5px;
+  width: 80px;
+  text-align: center;
+}
+

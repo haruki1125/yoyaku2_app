@@ -1,22 +1,26 @@
-<%= link_to '予約する', new_event_path, class:"btn" %> 
-<%= link_to 'メッセージを送る', message_index_path, class:"btn" %> 
-<ul class='lists-right'>
+<div class="sign">
       <%# deviseを導入できたら、ログインの有無で表示が変わるように分岐しましょう%>
       <% if user_signed_in? %>
-        <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "logout" %></li>
+        <%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "log" %></li>
       <% else %>
-        <li><%= link_to 'ログイン', new_user_session_path, class: "login" %></li>
-        <li><%= link_to '新規登録', new_user_registration_path, class: "sign-up" %></li>
+        <%= link_to 'ログイン', new_user_session_path, class: "log" %></li>
+        <%= link_to '新規登録', new_user_registration_path, class: "log" %></li>
       <% end %>
       <%# //deviseを導入できたら、ログインの有無で表示が変わるように分岐しましょう%>
-    </ul>
+</div>
+<div class="btn-box">
+<%= link_to '予約する', new_event_path, class:"btn" %> 
+<%= link_to 'メッセージを送る', message_index_path, class:"btn" %> 
+</div>
+<div class="border">
+<div class="event">
 <%= month_calendar events: @events do |date, events| %>
   <%= date.day %>
   <div>
     <% events.each do |event| %>
       <% if user_signed_in? %>
       <div>
-        <%= link_to event_path(event.id) do %>
+        <%= link_to event_path(event.id), class:"name" do %>
           <%= event.name %>
         <% end %>
       </div>
@@ -26,19 +30,23 @@
     <% end %>
   </div>
 <% end %>
-<%= link_to '予約カレンダー', guest_index_path %>
-<div>
+</div>
+</div>
+<%= link_to '予約カレンダーを見る', guest_index_path, class:"btn2" %>
+<div class="text">
 お客様画面
 </div>
+<div class="border">
+<div class="event">
 <%= month_calendar events: @message do |date, events| %>
   <%= date.day %>
   <div>
     <% events.each do |event| %>
-      <div>
-      <%= link_to message_path(event.id) do %>
+      <%= link_to message_path(event.id), class:"message" do %>
         <%= event.message %>
       <% end %>
-      <div>
     <% end %>
   </div>
 <% end %>
+</div>
+</div>

@@ -12,8 +12,11 @@ class EventsController < ApplicationController
 
 
   def create
-    Event.create(event_parameter)
-    redirect_to events_path
+    if Event.create(event_parameter)
+      redirect_to events_path
+    else
+      render :new
+    end
   end
 
   def show
@@ -29,7 +32,6 @@ class EventsController < ApplicationController
     else
       render :edit 
     end
-
   end
 
 
