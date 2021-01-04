@@ -1,7 +1,5 @@
 Rails.application.routes.draw do
-  get 'message/index'
-  get 'guest/index'
-  get 'events/index'
+  devise_for :users
   root to: 'guest#index'
   resources :events
   resources :guest

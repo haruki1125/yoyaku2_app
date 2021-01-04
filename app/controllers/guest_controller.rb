@@ -1,6 +1,8 @@
 class GuestController < ApplicationController
+  
   def index
     @guest = Message.all
+    @events = Event.all
   end
   def new
     @event = Event.new

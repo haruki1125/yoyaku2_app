@@ -1,13 +1,20 @@
-<%= link_to '予約する', new_guest_path %> 
+<div class= "liner">
+<div class="btn-box">
+<%= link_to '予約する', new_guest_path, class:"btn" %>
+</div> 
+<div class="border">
+<div class="event">
 <%= month_calendar events: @guest do |date, events| %>
   <%= date.day %>
   <div>
     <% events.each do |event| %>
-      <div>
+      <div class = "message2">
       <%= event.message %>
-      <div>
+      </div>
     <% end %>
   </div>
 <% end %>
-
+</div>
+</div>
 <%= link_to 'event', events_path %> 
+</div>
