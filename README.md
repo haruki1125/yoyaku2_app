@@ -30,3 +30,4 @@ has_many :messages
 
 ### Association
 belongs :user
+
