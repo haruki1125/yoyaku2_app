@@ -56,6 +56,7 @@ has_many :messages
 ##  messageテーブル
 
 | Column       | Type       | Options                        |
+| ------       | ---------- | ------------------------------ |
 | message      | string     | null: false,                   |
 | member       | string     | null: false,                   |
 | smart_time   | datetime   | null: false,                   |
